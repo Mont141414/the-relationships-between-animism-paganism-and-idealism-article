@@ -1,0 +1,61 @@
+\documentclass{report}
+
+% Font
+\usepackage{fontspec}
+\setmainfont{Crimson}
+\usepackage[fontsize=14pt]{fontsize}
+
+% Formatting
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% Hyperlinks and References
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+\geometry{a4paper,margin=3cm}
+
+\titleformat{\chapter}[display]
+    {\normalfont\large\bfseries\centering}
+    {}{0pt}{\large\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+\titleformat{\section}
+    {\normalfont\normalsize\bfseries\centering}
+    {\thesection}{1em}{\normalsize\MakeUppercase}
+\titlespacing*{\section}{0pt}{20pt}{20pt}
+
+\newcommand{\sectionbreak}{\clearpage}
+
+\begin{document}
+\begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+        {\Large\uppercase{\textbf{The Relationships Between Idealism, Animism, and Paganism}}} \\
+        \vspace{1cm}
+        {\Large by Matt "Mont" Montanari} \\
+    \end{center}
+    \vspace*{\fill}
+\end{titlepage}
+\tableofcontents
+\raggedright
+\setlength{\parindent}{15pt}
+\chapter{Introduction}
+\input{chapters/1_introduction.tex}
+\chapter{Definitions}
+\input{chapters/2_definitions.tex}
+\chapter{On Idealism}
+\input{chapters/3_on_idealism.tex}
+\chapter{On Animism}
+\input{chapters/4_on_animism.tex}
+\chapter{On Paganism}
+\input{chapters/5_on_paganism.tex}
+\chapter{Final Thoughts}
+\input{chapters/6_final_thoughts.tex}
+\printbibliography[heading=bibintoc]
+\end{document}
